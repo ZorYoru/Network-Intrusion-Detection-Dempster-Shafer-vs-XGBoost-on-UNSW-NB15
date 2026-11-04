@@ -1,0 +1,25 @@
+# Dataset (gede, bukan punya kita)
+data/*.csv
+data/*.parquet
+data/*.zip
+
+# Model hasil training
+*.joblib
+*.pkl
+*.model
+
+# Jupyter & Python
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Editor & sistem
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
