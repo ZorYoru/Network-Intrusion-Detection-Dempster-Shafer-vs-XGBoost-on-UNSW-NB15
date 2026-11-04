@@ -36,8 +36,17 @@ The main question: can a **Dempster-Shafer Theory (DST)** ensemble, which fuses 
 - Dempster-Shafer fusion improved on standalone SVM (75.42% vs. 70.51% accuracy), but did not outperform XGBoost.
 - Random Forest had the highest precision (84.11%).
 
-<!-- Optional: add your confusion matrix images from the results/ folder -->
-<!-- ![Confusion matrix XGBoost](results/confusion_matrix_xgboost.png) -->
+![Model comparison](results/model_comparison.png)
+
+**Confusion matrices**
+
+| Random Forest | SVM |
+|---|---|
+| ![Random Forest](results/confusion_matrix_random_forest.png) | ![SVM](results/confusion_matrix_svm.png) |
+
+| Dempster-Shafer | XGBoost |
+|---|---|
+| ![Dempster-Shafer](results/confusion_matrix_dempster_shafer.png) | ![XGBoost](results/confusion_matrix_xgboost.png) |
 
 ## Limitations
 
@@ -49,35 +58,36 @@ The main question: can a **Dempster-Shafer Theory (DST)** ensemble, which fuses 
 
 ```
 .
-├── ids_unsw_nb15.ipynb      # full pipeline: preprocessing, training, DST fusion, evaluation
-├── docs/
-│   └── penulisan-ilmiah.pdf # full written thesis (Bahasa Indonesia)
-├── results/                 # figures and result tables
+├── notebook/
+│   └── ids_unsw_nb15.ipynb   # full pipeline: preprocessing, training, DST fusion, evaluation
+├── results/
+│   ├── confusion_matrix_random_forest.png
+│   ├── confusion_matrix_svm.png
+│   ├── confusion_matrix_dempster_shafer.png
+│   ├── confusion_matrix_xgboost.png
+│   └── confusion_matrix_comparasion.png
 ├── data/
-│   └── README.md            # how to download the dataset
+│   └── README.md             # how to download the dataset
 ├── requirements.txt
-└── .gitignore
+├── .gitignore
+└── README.md
 ```
 
 ## How to run
 
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/USERNAME/ids-dempster-shafer-xgboost.git
-   cd ids-dempster-shafer-xgboost
+   git clone https://github.com/USERNAME/Network-Intrusion-Detection-Dempster-Shafer-vs-XGBoost-on-UNSW-NB15.git
+   cd Network-Intrusion-Detection-Dempster-Shafer-vs-XGBoost-on-UNSW-NB15
    ```
 2. **Install dependencies** (Python 3.9+ recommended)
    ```bash
    pip install -r requirements.txt
    ```
 3. **Download the dataset** and place the two CSV files in the `data/` folder. See [data/README.md](data/README.md).
-4. **Run the notebook** `ids_unsw_nb15.ipynb` from top to bottom.
+4. **Run the notebook** `notebook/ids_unsw_nb15.ipynb` from top to bottom.
 
 > Note: training the SVM takes a long time (it took roughly 90 minutes in my setup). To test quickly, lower the SVM sample size in the notebook.
-
-## Thesis document
-
-The full written thesis (in Bahasa Indonesia) is available in [`docs/penulisan-ilmiah.pdf`](docs/penulisan-ilmiah.pdf).
 
 ## Tech stack
 
