@@ -77,7 +77,7 @@ The main question: can a **Dempster-Shafer Theory (DST)** ensemble, which fuses 
 
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/USERNAME/Network-Intrusion-Detection-Dempster-Shafer-vs-XGBoost-on-UNSW-NB15.git
+   git clone https://github.com/ZorYoru/Network-Intrusion-Detection-Dempster-Shafer-vs-XGBoost-on-UNSW-NB15.git
    cd Network-Intrusion-Detection-Dempster-Shafer-vs-XGBoost-on-UNSW-NB15
    ```
 2. **Install dependencies** (Python 3.9+ recommended)
